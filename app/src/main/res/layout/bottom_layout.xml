@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_gravity="bottom"
+    android:layout_alignParentBottom="true"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:background="#cac8c8"
+        android:id="@+id/ln_van_tat_bai_hat"
+        android:layout_width="match_parent"
+        android:layout_height="70sp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ln1"
+                android:layout_width="80sp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/anh_ca_si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:padding="5sp"
+                    android:src="@drawable/soobinhoangson" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ln2"
+                android:layout_width="240sp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_toLeftOf="@+id/imgList"
+                android:layout_toRightOf="@+id/ln1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/van_tat_bai_hat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tên bài hát"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/ten_ca_si"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3sp"
+                    android:text="Soobin Hoàng Sơn"
+                    android:textColor="#cc0d0c0c" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/framelayout"
+                android:layout_width="60sp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+                <ImageButton
+                    android:id="@+id/btn_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:background="@null"
+                    android:padding="5sp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_media_play_light"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/btn_pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:background="@null"
+                    android:padding="5sp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_media_pause_light" />
+            </FrameLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

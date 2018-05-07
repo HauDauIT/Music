@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/soobinhoangson">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="#ccf7f2f2"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ln1"
+                android:layout_width="80sp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/anh_ca_si"
+                    android:layout_width="80sp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:padding="5sp"
+                    android:src="@drawable/soobinhoangson" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ln2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/ln1"
+                android:layout_toLeftOf="@+id/imgList"
+                android:layout_marginLeft="2sp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/van_tat_bai_hat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tên bài hát"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/ten_ca_si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3sp"
+                    android:text="Soobin Hoàng Sơn"
+                    android:textColor="#cc0d0c0c" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgList"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/other"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_queue_dark" />
+
+            <ImageView
+                android:id="@+id/other"
+                android:layout_width="50sp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="left"
+                android:src="@drawable/ic_menu_moreoverflow_large_normal" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="70sp"
+        android:layout_height="35sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:src="@drawable/ic_repeat_white"
+        android:id="@+id/imageView" />
+
+    <ImageView
+        android:layout_width="70sp"
+        android:layout_height="35sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:src="@drawable/ic_shuffle_white" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_Player"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ccf7f2f2"
+        android:minHeight="86dp"
+        android:orientation="vertical">
+
+        <SeekBar
+            android:id="@+id/seekbar_music"
+            style="?android:progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            android:thumb="@drawable/circle" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_currentPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:text="00:00"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tv_Duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="00:00"
+                android:textColor="@android:color/black" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btn_like"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_thumbs_up_default"/>
+
+            <ImageButton
+                android:id="@+id/btn_previous"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_rew_dark" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/btn_play"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/pause"/>
+
+                <ImageButton
+                    android:visibility="gone"
+                    android:id="@+id/btn_pause"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/play"/>
+
+            </FrameLayout>
+
+
+            <ImageButton
+                android:id="@+id/btn_next"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_fwd_dark" />
+
+            <ImageButton
+                android:id="@+id/btn_dislike"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_thumbs_down_default" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
